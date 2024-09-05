@@ -15,6 +15,15 @@ class Account {
             }
         }
 
+        void withdraw (int withdrawAmount) {
+            if (withdrawAmount > balance) {
+                std::cout << "El monto del retiro es mayor al saldo de la cuenta" << std::endl;
+            }
+            else {
+                balance = balance - withdrawAmount ;
+            }
+        }
+
         int getBalance() const {
             return balance;
         }
@@ -30,3 +39,5 @@ class Account {
         std::string name;
         int balance{0};
 };
+
+
